@@ -51,6 +51,7 @@ func main() {
 
 	// start server
 	if err := http.ListenAndServe(":8081", nil); err != nil {
+		log.Println("hakaru - Server started!")
 		log.Fatal(err)
 	}
 }
