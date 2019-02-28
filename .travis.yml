@@ -31,13 +31,13 @@ script:
   - make build
 
 after_success:
-  - make artifacts.tgz
+  - make upload
 
 addons:
   # https://suzuken.hatenablog.jp/entry/2015/12/18/150555
   artifacts:
     paths:
       - artifacts.tgz
-    bucket: sunrise2018-hakaru-artifacts
+    bucket: dakara600-hakaru-artifacts
     target_paths: latest:$TRAVIS_COMMIT
     s3_region: ap-northeast-1
