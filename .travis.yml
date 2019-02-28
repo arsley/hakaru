@@ -31,6 +31,7 @@ script:
   - make build
 
 after_success:
+  - echo "HAKARU_DATASOURCENAME=${HAKARU_DB_USER}:${HAKARU_DB_PASSWORD}@${HAKARU_DB_HOST}" >> provisioning/instance/sysconfig/hakaru
   - make artifacts.tgz
 
 addons:
