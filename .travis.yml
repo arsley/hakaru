@@ -38,6 +38,6 @@ addons:
   artifacts:
     paths:
       - artifacts.tgz
-    bucket: sunrise2018-hakaru-artifacts
+    bucket: dakara600-hakaru-artifacts
     target_paths: latest:$TRAVIS_COMMIT
     s3_region: ap-northeast-1
