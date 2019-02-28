@@ -11,6 +11,8 @@ import (
 )
 
 func main() {
+	log.Println("hakaru - Server started!")
+
 	dataSourceName := os.Getenv("HAKARU_DATASOURCENAME")
 	if dataSourceName == "" {
 		dataSourceName = "root:hakaru-pass@tcp(127.0.0.1:13306)/hakaru-db"
@@ -51,7 +53,6 @@ func main() {
 
 	// start server
 	if err := http.ListenAndServe(":8081", nil); err != nil {
-		log.Println("hakaru - Server started!")
 		log.Fatal(err)
 	}
 }
